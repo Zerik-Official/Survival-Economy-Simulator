@@ -1,44 +1,49 @@
+#authors: Deyanis Martelo, Laimen Mejia
+#description: The game requests the player's name and sets up global variables based on difficulty
 
-#autores:Deyanis Martelo , Laimen Mejia 
-#descripcion: variables globales, dificultad y nombre del jugador
-print("============ BIENVENIDO AL JUEGO SUPERVIVENCIA AL EXTREMO===========")
-nombre:str = input("Por favor introduce tu nombre: ").strip().lower() 
-print("Elija la dificultad")
+#welcome message
+print("============ WELCOME TO THE GAME SURVIVAL TO THE EXTREME ===========")
 
-print("- Facil")
+#player name is requested
+name:str = input("Please enter your name: ").strip().lower()
+
+#game variables
+game_active:bool = True
+victory:bool = False
+day:int = 1
+
+#player chooses the difficulty they will play on
+print("Choose your difficulty")
+
+print("- Easy")
 print("- Normal")
-print("- Dificil")
+print("- Hard")
+#resource configuration based on difficulty
+difficulty:str = input("Difficulty:   ").strip().lower()
 
-dificultad:str = input("Dificultad:   ").strip().lower()
+#easy resources
+if difficulty == "easy":
+    firewood:int = 100
+    wheat:int = 100
+    gold:int = 100
+    population:int = 10
+    wheat_price:float = 10
+    print("your chosen difficulty is easy")
 
+#intermediate resources
+elif difficulty == "normal":
+    firewood:int = 50
+    wheat:int = 50
+    gold:int = 50
+    population:int = 10
+    wheat_price:float = 10
+    print("your chosen difficulty is normal")
 
-if dificultad == "facil" : 
-    leña:int = 100
-    trigo:int = 100
-    oro:int = 100
-    poblacion:int = 10
-    precio_trigo:float = 10
-    juego_activo:bool = True
-    victoria:bool = False
-    print("tu dificultad eligida es facil")
-
-elif dificultad == "normal" :
-    leña:int = 50
-    trigo:int = 50
-    oro:int = 50
-    poblacion:int = 10
-    precio_trigo:float = 10
-    juego_activo:bool = True
-    victoria:bool = False
-    print("tu dificultad eligida es normal")
-
+#hard resources
 else:
-    leña:int = 20
-    trigo:int = 20
-    oro:int = 20
-    poblacion:int = 10
-    precio_trigo:float = 10
-    juego_activo:bool = True
-    victoria:bool = False
-
-    print("tu dificultad eligida es dificil")
+    firewood:int = 20
+    wheat:int = 20
+    gold:int = 20
+    population:int = 10
+    wheat_price:float = 10
+    print("your chosen difficulty is hard")
