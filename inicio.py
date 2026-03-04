@@ -10,16 +10,16 @@
 print("============ WELCOME TO THE GAME SURVIVAL TO THE EXTREME ===========")
 
 
+# Player name
 name:str = input("Please enter your name: ").strip().lower()
 
-#game variables
+# Game State Variables
 game_active:bool = True
 victory:bool = False
 current_day:int = 1
 show_table:bool = False
-difficulty = None
 
-#player chooses the difficulty they will play on
+# player chooses the difficulty they will play on
 
 print("Choose your difficulty")
 
@@ -27,34 +27,27 @@ print("- Easy")
 print("- Normal")
 print("- Hard")
 
-def entry_difficulty(): 
-    try:
-        not_error:bool = False
+def entry_difficulty() -> str: 
 
-        valids_difficultys:list[str] = ["easy", "normal", "hard"]
+    difficulty:str = None
 
-        while (not not_error):
-            #resource configuration based on difficulty
+    difficulty_map:list[str] = ["easy", "normal", "hard"]
 
-            difficulty = input("Difficulty:   ").strip().lower()
+    while difficulty not in difficulty_map:
+        print("Please choose: easy, normal, or hard")
+        difficulty:str = input("Choose Difficulty: ").strip().lower()
+    
+    return difficulty
 
-
-            if difficulty not in valids_difficultys:
-                print("chamo, pon una dificultad real")
-                continue
-            
-            return difficulty
-    except ValueError: 
-        print("Please choose a valid difficulty")
 
 #easy resources
-def choose_difficulty(difficulty): 
+def choose_difficulty(difficulty:str) -> list[int]: 
     if difficulty == "easy":
         firewood:int = 100
         wheat:int = 100
         gold:int = 100
         population:int = 10
-        wheat_price:float = 10
+        wheat_price:int = 10
         print("your chosen difficulty is easy")
 
     #intermediate resources
@@ -63,7 +56,7 @@ def choose_difficulty(difficulty):
         wheat:int = 50
         gold:int = 50
         population:int = 10
-        wheat_price:float = 10
+        wheat_price:int = 10
         print("your chosen difficulty is normal")
 
     #hard resources
@@ -72,10 +65,7 @@ def choose_difficulty(difficulty):
         wheat:int = 20
         gold:int = 20
         population:int = 10
-        wheat_price:float = 10
+        wheat_price:int = 10
         print("your chosen difficulty is hard")
-    else:
-        print("Please choose a valid difficulty (easy, normal, hard)")
-        return None
 
     return firewood, wheat, gold, population, wheat_price
