@@ -268,3 +268,51 @@
 
 - Bloqueos:
   No.
+ 
+---
+
+## Daily Scrum - 06/03/26
+
+### Equipo completo (Product Owner, Scrum Master, T.L y Developers)
+
+- Qué hicimos hoy:
+  Nos reunimos para comunicar el cómo nos manejariamos con las ramas en el repositorio ahora, puesto que las ramas `feature/*` fueron eliminadas, ahora todos trabajaron bajo la rama dev, modificando nada más su archivo asignado. 
+
+- Qué haremos mañana:
+  Presentar un M.V.P de lo que llevamos al cliente al cliente.
+
+- Bloqueos:
+  No se presentaron bloqueos.
+
+### Gustavo (Scrum Master / README)
+
+- Qué hice hoy:
+  Realicé una revisión de lo que se lleva en el proyecto, inicio.py, eventos.py, consumo.py, interfaz.py, etc. Y empecé a añadir comentarios DOCSTRINGS a cada función
+
+- Qué haré mañana:
+  Explicar al equipo, que de ahora en adelante, documentaremos cada función usando DOCSTRINGS, con el formato de pequeña descripción de lo que hace la función, argumentos y returns.
+
+- Bloqueos:
+  No.
+
+### Gustavo (Scrum Master / README)
+
+- Qué hice hoy:
+  Realicé una revisión en `inicio.py` y hice unas refactorizaciones con respecto al bucle en entry_difficulty, además que ahora `choose_difficulty()` retorna un diccionario con los recursos dependiendo de la dificultad, para facilitar su uso en otros archivos
+
+- Qué haré mañana:
+  Presentar el M.V.P al cliente.
+
+- Bloqueos:
+  No.
+
+### Gustavo (Scrum Master / README)
+
+- Qué hice hoy:
+  Realicé una revisión en `estado.py` para ver como manejaba las condiciones de derrota y realicé un refactor de la función, para usar dicciones en vez de listas, para facilitar la lectura y el mantenimiento del código.
+
+- Qué haré mañana:
+  Presentar el M.V.P al cliente.
+
+- Bloqueos:
+  No.
