@@ -3,8 +3,9 @@
 # Authors: Deyanis Martelo, Laimen Mejia
 # Description: The game requests the player's name and sets up
 #              global variables based on the difficulty level.
-# Runs after: N/A (entry point of the game)
 # ================================================================
+import random
+
 
 # ======================== WELCOME MESSAGE ========================
 print("============ WELCOME TO THE GAME SURVIVAL TO THE EXTREME ===========")
@@ -13,59 +14,74 @@ print("============ WELCOME TO THE GAME SURVIVAL TO THE EXTREME ===========")
 # Player name
 name:str = input("Please enter your name: ").strip().lower()
 
-# Game State Variables
-game_active:bool = True
-victory:bool = False
-current_day:int = 1
-show_table:bool = False
+def entry_difficulty() -> str:
+    """ 
+    Function to prompt the player to choose a difficulty level and validate the input. 
+    
+    Args: 
+        None 
+    Returns: 
+        difficulty (str): The chosen difficulty level as a string ("1", "2", or "3").
 
-# player chooses the difficulty they will play on
-
-print("Choose your difficulty")
-
-print("- Easy")
-print("- Normal")
-print("- Hard")
-
-def entry_difficulty() -> str: 
-
-    difficulty:str = None
-
-    difficulty_map:list[str] = ["easy", "normal", "hard"]
+    """
+    difficulty = None
+    difficulty_map:list[str] = ["1", "2", "3"]
 
     while difficulty not in difficulty_map:
-        print("Please choose: easy, normal, or hard")
-        difficulty:str = input("Choose Difficulty: ").strip().lower()
-    
+        print("Choose your difficulty:")
+        print("1) Easy")
+        print("2) Normal")
+        print("3) Hard")
+
+        difficulty:str = input("Choose difficulty: ").strip()
+
+        if difficulty not in difficulty_map:
+            print("Please enter a valid option.")
+
     return difficulty
 
+def choose_difficulty(difficulty:str) -> dict[str, int | float]:
+    """
+    Function to set up the game resources based on the chosen difficulty level.
 
-#easy resources
-def choose_difficulty(difficulty:str) -> list[int]: 
-    if difficulty == "easy":
-        firewood:int = 100
-        wheat:int = 100
-        gold:int = 100
-        population:int = 10
-        wheat_price:int = 10
-        print("your chosen difficulty is easy")
+    Args:
+        difficulty (str): The chosen difficulty level as a string ("1", "2", or "3").
+    Returns:
+        resources (dict[str, int | float]): A dictionary containing the initial resources for the game.
+    """
 
-    #intermediate resources
-    elif difficulty == "normal":
-        firewood:int = 50
-        wheat:int = 50
-        gold:int = 50
-        population:int = 10
-        wheat_price:int = 10
-        print("your chosen difficulty is normal")
+    
+    # Randomly generate the population between 1 and 6
+    population:int = random.randint(1, 6)
 
-    #hard resources
-    elif difficulty == "hard":
-        firewood:int = 20
-        wheat:int = 20
-        gold:int = 20
-        population:int = 10
-        wheat_price:int = 10
-        print("your chosen difficulty is hard")
+    # Easy respurces
+    if difficulty == "1":
+        resources = {
+            "firewood": 100,
+            "wheat": 100,
+            "gold": 100,
+            "population": population,
+            "wheat_price": 10
+        }
 
-    return firewood, wheat, gold, population, wheat_price
+    # Normal resources
+    elif difficulty == "2":
+        resources = {
+            "firewood": 50,
+            "wheat": 50,
+            "gold": 50,
+            "population": population,
+            "wheat_price": 10
+        }
+
+    # Hard resources
+    elif difficulty == "3":
+        resources = {
+            "firewood": 20,
+            "wheat": 20,
+            "gold": 20,
+            "population": population,
+            "wheat_price": 10
+        }
+
+    return resources
