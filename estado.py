@@ -2,13 +2,21 @@
 # Author: Juan Jose Varela
 # Description: Verifies resource limits and determines defeat conditions.
 
-def verify_state (resources:list):
+def verify_state(resources:dict[str, int | float]) -> bool:
+    """
+    Function to verify the current state of the game by checking resource limits and determining defeat conditions.
+    
+    Args:
+        resources (dict[str, int | float]): A dictionary containing the current quantities of each resource.
+    Returns:
+        bool: True if the game continues, False if a defeat condition is met.
+    """
 
-    firewood = resources[0]
-    wheat = resources[1]
-    population = resources[2]
+    firewood = resources['firewood']
+    wheat = resources['wheat']
+    population = resources['population']
 
-# I normalize negatives as 0
+    # I normalize negatives as 0
 
     if firewood < 0:  
         firewood = 0
@@ -19,13 +27,13 @@ def verify_state (resources:list):
     if population < 0:
         population = 0
 
-# I update the list
+    # I update the list
 
-    resources[0] = firewood
-    resources[1] = wheat
-    resources[2] = population
+    resources['firewood'] = firewood
+    resources['wheat'] = wheat
+    resources['population'] = population
 
-#Defeat conditions
+    #Defeat conditions
 
     if wheat == 0:
         print("GAME OVER: You are out of wheat")
