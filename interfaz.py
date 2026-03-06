@@ -6,7 +6,15 @@
 #===========================================================================
 from colorama import init, Fore, Style
 
-def color_off_resource(cuantity: int) -> str:
+ICONS = {
+    "firewood":   "🪵",
+    "wheat":      "🌾",
+    "gold":       "💰",
+    "population": "👥",
+}
+
+
+def color_off_resource(quantity: int) -> str:
     """
     Determine the color for a resource based on its quantity.
 
@@ -16,10 +24,10 @@ def color_off_resource(cuantity: int) -> str:
     Returns:
         str: The color code for the resource.
     """
-    if cuantity < 20:
+    if quantity < 20:
         return Fore.RED
 
-    elif cuantity > 60 and cuantity < 80:
+    elif quantity > 60 and quantity < 80:
         return Fore.YELLOW
 
     else: 
@@ -37,8 +45,11 @@ def show_resources_list(player_name:str, current_day:int, current_day_text:str, 
     Returns:
         None
     """
-    print("Player name: ", player_name.capitalize())
-    print("firewood", resources["firewood"])
-    print("wheat", resources["wheat"])
-    print("gold", resources["gold"])
-    print("poblacion", resources["population"])
+    print()
+    print(f"  ⚔️  Kingdom Resources  ⚔️")
+    print()
+    print(f"  {ICONS['firewood']} firewood {color_off_resource(resources['firewood'])}{resources['firewood']}{Style.RESET_ALL}")
+    print(f"  {ICONS['wheat']} wheat {color_off_resource(resources['wheat'])}{resources['wheat']}{Style.RESET_ALL}")
+    print(f"  {ICONS['gold']} gold {color_off_resource(resources['gold'])}{resources['gold']}{Style.RESET_ALL}")
+    print(f"  {ICONS['population']} population {resources['population']}")
+    print()
