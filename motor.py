@@ -74,7 +74,7 @@ def day_cycle():
         apply_event(difficulty, resources)
 
         print("\n--- CONSUMPTION ---")
-        consume(resources)
+        consume(resources, current_day_text)
 
         print("\n--- MARKET ---")
         market_logic(resources)
