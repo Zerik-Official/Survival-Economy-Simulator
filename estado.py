@@ -1,6 +1,10 @@
 # Estado.py
 # Author: Juan Jose Varela
 # Description: Verifies resource limits and determines defeat conditions.
+from colorama import init
+import colorama
+
+init()
 
 def verify_state(resources:dict[str, int | float]) -> bool:
     """
@@ -36,13 +40,13 @@ def verify_state(resources:dict[str, int | float]) -> bool:
     #Defeat conditions
 
     if wheat == 0:
-        print("GAME OVER: You are out of wheat")
+        print(colorama.Fore.RED + "GAME OVER: You are out of wheat")
         return False
     elif population == 0:
-        print("GAME OVER: Your population is gone")
+        print(colorama.Fore.RED + "GAME OVER: Your population is gone")
         return False
     elif firewood == 0:  
-        print("GAME OVER: You ran out of firewood")
+        print(colorama.Fore.RED + "GAME OVER: You ran out of firewood")
         return False
 
     return True
