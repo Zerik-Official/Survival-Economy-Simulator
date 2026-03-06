@@ -40,10 +40,9 @@ def init_engine() -> tuple[str, dict[str, int | float], str]:
 
     resources = choose_difficulty(difficulty)
 
-    randon_entry_day: int = random.randint(1, len(day_of_weeks) - 1)
-    current_day_text: str = day_of_weeks[randon_entry_day]
 
-    return difficulty, resources, current_day_text
+
+    return difficulty, resources
 
 # Main game loop. Iterates through each day (1 to 10) while the game remains active.
 # On each day, it waits for player input, updates the day, and reloads all game modules.
@@ -53,9 +52,15 @@ def day_cycle():
     global current_day
     global game_active
 
-    difficulty, resources, current_day_text = init_engine()
+    random_entry_day: int = random.randint(0, len(day_of_weeks) - 1)
+    
+
+    difficulty, resources = init_engine()
 
     while current_day <= 10 and game_active:
+
+        current_day_text: str = day_of_weeks[random_entry_day % len(day_of_weeks)]
+        
 
         print("\n===================================")
         print(f"DAY {current_day} - {current_day_text}")
@@ -83,6 +88,7 @@ def day_cycle():
         input("\nPress ENTER to pass the day...")
 
         current_day += 1
+        random_entry_day += 1
 
     if game_active:
         print("\nYou survived 10 days! You win!")
