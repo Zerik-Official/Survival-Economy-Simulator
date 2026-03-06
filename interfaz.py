@@ -37,7 +37,7 @@ def show_resources_list(player_name:str, current_day:int, current_day_text:str, 
     Returns:
         None
     """
-
+    print("Player name: ", player_name.capitalize())
     print("firewood", resources["firewood"])
     print("wheat", resources["wheat"])
     print("gold", resources["gold"])
