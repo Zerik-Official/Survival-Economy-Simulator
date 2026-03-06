@@ -42,5 +42,5 @@ def verify_state(resources:dict[str, int | float]) -> bool:
         print("GAME OVER: Your population is gone")
         return False
     elif firewood == 0:  
-        print("WARNING: No firewood, Population  will decrease due to cold")
+        print("GAME OVER: You ran out of firewood")
         return False
