@@ -24,7 +24,7 @@ def color_off_resource(quantity: int) -> str:
     Returns:
         str: The color code for the resource.
     """
-    if quantity < 20:
+    if quantity < 60:
         return Fore.RED
 
     elif quantity > 60 and quantity < 80:

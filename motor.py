@@ -56,15 +56,15 @@ def day_cycle():
     
 
     difficulty, resources = init_engine()
+    
 
     while current_day <= 10 and game_active:
-
-        current_day_text: str = day_of_weeks[random_entry_day % len(day_of_weeks)]
         
+        current_day_text: str = day_of_weeks[random_entry_day % len(day_of_weeks)]
 
-        print("\n===================================")
-        print(f"DAY {current_day} - {current_day_text}")
-        print("===================================\n")
+        print("\n============================================================================================")
+        print(f"👤 Player: {name.capitalize()} | 📅 Day {current_day} - {current_day_text}")
+        print("============================================================================================\n")
 
         # Show resources
         show_resources_list(name, current_day, current_day_text, resources)
@@ -74,7 +74,7 @@ def day_cycle():
         apply_event(difficulty, resources)
 
         print("\n--- CONSUMPTION ---")
-        consume(resources, current_day_text)
+        consume(resources)
 
         print("\n--- MARKET ---")
         market_logic(resources)
@@ -86,7 +86,7 @@ def day_cycle():
             break
 
         input("\nPress ENTER to pass the day...")
-
+        
         current_day += 1
         random_entry_day += 1
 
