@@ -2,95 +2,95 @@
 
 ## Daily Scrum - 01/03/26
 
-### Equipo completo (Product Owner, Scrum Master, T.L y Developers)
+### Full Team (Product Owner, Scrum Master, T.L and Developers)
 
-- Qué hicimos hoy:
-  Nos reunimos para planificar la distribución del trabajo. Realizamos una autoevaluación del nivel de conocimientos de cada integrante con el fin de asignar los archivos según su nivel de complejidad.
+- What we did today:
+  We met to plan the work distribution. We conducted a self-assessment of each team member's knowledge level to assign files according to their complexity.
 
-- Qué haremos mañana:
-  Iniciar la implementación de la lógica base en `inicio.py` para establecer las variables principales del juego y permitir la integración posterior con los demás módulos.
+- What we will do tomorrow:
+  Start implementing the base logic in `inicio.py` to establish the main game variables and allow subsequent integration with other modules.
 
-- Bloqueos:
-  No se presentaron bloqueos.
+- Blockers:
+  No blockers were presented.
 
 
 ---
 
 ## Daily Scrum - 02/03/26
 
-### Deyanis y Laimen (inicio.py)
+### Deyanis and Laimen (inicio.py)
 
-- Qué hicimos hoy:
-  Definimos las variables iniciales del juego. Implementamos la validación de dificultad y la asignación de recursos según el nivel elegido. También solicitamos al usuario el nombre y la dificultad mediante `input`.
+- What we did today:
+  We defined the initial game variables. We implemented difficulty validation and resource assignment based on the chosen level. We also requested the user's name and difficulty via `input`.
 
-- Qué haremos mañana:
-  Integrar la lógica de consumo y estado dentro del bucle principal del juego.
+- What we will do tomorrow:
+  Integrate consumption and state logic within the main game loop.
 
-- Bloqueos:
-  No se presentaron bloqueos.
+- Blockers:
+  No blockers were presented.
 
 
 ### Melissa (motor.py)
 
-- Qué hice hoy:
-  Creé el archivo `motor.py` e inicié la importación del módulo `inicio.py` para acceder a sus variables y comenzar a estructurar el bucle principal que orquesta el juego.
+- What I did today:
+  I created the `motor.py` file and started importing the `inicio.py` module to access its variables and begin structuring the main loop that orchestrates the game.
 
-- Qué haré mañana:
-  Apoyar a los demás integrantes en la estructura de sus módulos para facilitar la integración con el motor principal.
+- What I will do tomorrow:
+  Support other team members in structuring their modules to facilitate integration with the main engine.
 
-- Bloqueos:
-  Sí.
+- Blockers:
+  Yes.
 
-- Motivo:
-  El código desarrollado se encuentra únicamente en entorno local y no se logró subir a GitHub, lo que dificulta la integración con el equipo.
+- Reason:
+  The developed code is only in the local environment and could not be uploaded to GitHub, which hinders team integration.
 
 ### Saul (eventos.py)
 
-- Qué hice hoy:
-  No se realizaron avances en el módulo asignado debido a que se estaba a la espera de la definición final del flujo principal del juego en `inicio.py` y `motor.py`.
+- What I did today:
+  No progress was made on the assigned module because we were waiting for the final definition of the main game flow in `inicio.py` and `motor.py`.
 
-- Qué haré mañana:
-  Iniciar la estructuración de la lógica de eventos diarios y definir los posibles escenarios aleatorios.
+- What I will do tomorrow:
+  Start structuring the daily events logic and define possible random scenarios.
 
-- Bloqueos:
-  Sí.
-  Dependencia de la estructura base del motor para garantizar compatibilidad.
+- Blockers:
+  Yes.
+  Dependency on the base engine structure to ensure compatibility.
 
 
 ### Angela (consumo.py)
 
-- Qué hice hoy:
-  No se realizaron avances técnicos. Se revisaron los requerimientos funcionales del módulo de consumo para planificar la implementación.
+- What I did today:
+  No technical progress was made. The functional requirements of the consumption module were reviewed to plan the implementation.
 
-- Qué haré mañana:
-  Implementar la lógica de reducción diaria de recursos según la población definida.
+- What I will do tomorrow:
+  Implement the logic for daily resource reduction based on the defined population.
 
-- Bloqueos:
+- Blockers:
   No.
 
 
 ### Elianis (interfaz.py)
 
-- Qué hice hoy:
-  No se registraron avances debido a que el diseño visual depende de la estructura final de salida definida en el motor principal.
+- What I did today:
+  No progress was recorded because the visual design depends on the final output structure defined in the main engine.
 
-- Qué haré mañana:
-  Diseñar la estructura base de tablas visuales y pruebas iniciales con formato en consola.
+- What I will do tomorrow:
+  Design the base structure of visual tables and initial tests with console formatting.
 
-- Bloqueos:
-  Sí.
-  Dependencia parcial del flujo principal del juego.
+- Blockers:
+  Yes.
+  Partial dependency on the main game flow.
 
 
 ### Gustavo (README.md)
 
-- Qué hice hoy:
-  Se realizó revisión general del proyecto para comenzar a estructurar la documentación técnica, supervisé los push a la rama dev, para hacer los merges sin generar conflictos.
+- What I did today:
+  A general review of the project was conducted to begin structuring the technical documentation, I supervised the pushes to the dev branch, to perform merges without generating conflicts.
 
-- Qué haré mañana:
-  Redactar la sección inicial del README con descripción del proyecto y objetivos.
+- What I will do tomorrow:
+  Write the initial README section with project description and objectives.
 
-- Bloqueos:
+- Blockers:
   No.
 
 
@@ -98,175 +98,175 @@
 
 ## Daily Scrum - 03/03/26
 
-### Deyanis y Laimen (inicio.py)
+### Deyanis and Laimen (inicio.py)
 
-- Qué hicimos hoy:
-  Refactorizamos variables innecesarias, traducimos el código al inglés para mantener coherencia técnica y enviamos los cambios al repositorio.
+- What we did today:
+  We refactored unnecessary variables, translated the code to English to maintain technical coherence, and sent the changes to the repository.
 
-- Qué haremos mañana:
-  Mejorar la documentación interna del código, eliminar comentarios redundantes y simplificar la lógica donde sea posible.
+- What we will do tomorrow:
+  Improve internal code documentation, remove redundant comments, and simplify logic where possible.
 
-- Bloqueos:
-  No se presentaron bloqueos.
+- Blockers:
+  No blockers were presented.
 
 ### Saul (eventos.py)
 
-- Qué hice hoy:
-  Se definió la estructura base del módulo de eventos y se plantearon los posibles tipos de eventos (negativos o sin evento).
+- What I did today:
+  The base structure of the events module was defined and possible event types were proposed (negative or no event).
 
-- Qué haré mañana:
-  Implementar la función de generación aleatoria diaria.
+- What I will do tomorrow:
+  Implement the daily random generation function.
 
-- Bloqueos:
+- Blockers:
   No.
 
 
 ### Angela (consumo.py)
 
-- Qué hice hoy:
-  Se diseñó la lógica base para calcular el consumo diario de recursos en función de la población.
+- What I did today:
+  The base logic for calculating daily resource consumption based on population was designed.
 
-- Qué haré mañana:
-  Integrar pruebas iniciales del cálculo con valores simulados.
+- What I will do tomorrow:
+  Integrate initial tests of the calculation with simulated values.
 
-- Bloqueos:
+- Blockers:
   No.
 
 
 ### Elianis (interfaz.py)
 
-- Qué hice hoy:
-  Se realizaron pruebas iniciales de formato en consola y estructura de presentación de datos, no se logró subir los archivos debido a un problema con git, los cambios quedaron en la maquina local.
+- What I did today:
+  Initial console formatting tests and data presentation structure were performed, files could not be uploaded due to a git problem, changes remained on the local machine.
 
-- Qué haré mañana:
-  Ajustar el diseño visual para mejorar claridad en la presentación de recursos y estado.
+- What I will do tomorrow:
+  Adjust the visual design to improve clarity in resource and status presentation.
 
-- Bloqueos:
-  Sí.
-  Problema con Git que impidió subir los cambios al repositorio.
+- Blockers:
+  Yes.
+  Git problem that prevented uploading changes to the repository.
 
 
 ### Gustavo (README.md)
 
-- Qué hice hoy:
-  Se comenzó la redacción del README incluyendo descripción general del juego y estructura del proyecto.
+- What I did today:
+  The README drafting began, including a general game description and project structure.
 
-- Qué haré mañana:
-  Agregar sección de instalación y ejecución.
+- What I will do tomorrow:
+  Add installation and execution section.
 
-- Bloqueos:
+- Blockers:
   No.
 
 ### Juan (estado.py)
 
-- Qué hice hoy:
-  Me integré al equipo de desarrollo y revisé la estructura actual del proyecto para comprender la arquitectura y responsabilidades de cada módulo.
+- What I did today:
+  I joined the development team and reviewed the current project structure to understand the architecture and responsibilities of each module.
 
-- Qué haré mañana:
-  Iniciar la implementación del módulo `estado.py`, definiendo las validaciones principales del juego.
+- What I will do tomorrow:
+  Start implementing the `estado.py` module, defining the main game validations.
 
-- Bloqueos:
+- Blockers:
   No.
 
 ---
 
 ## Daily Scrum - 04/03/26
 
-### Deyanis y Laimen (inicio.py)
+### Deyanis and Laimen (inicio.py)
 
-- Qué hicimos hoy:
-  Se mejoró la estructura del módulo `inicio.py`, simplificando la validación de dificultad y ajustando el tipado de funciones para facilitar su integración con los demás módulos del juego.
+- What we did today:
+  The structure of the `inicio.py` module was improved, simplifying difficulty validation and adjusting function typing to facilitate integration with other game modules.
 
-- Qué haremos mañana:
-  Realizar pruebas de integración con el motor y validar la correcta inicialización de recursos.
+- What we will do tomorrow:
+  Perform integration tests with the engine and validate correct resource initialization.
 
-- Bloqueos:
-  No se presentaron bloqueos.
+- Blockers:
+  No blockers were presented.
 
 
 ### Juan (estado.py)
 
-- Qué hice hoy:
-  Implementé la función `verify_state`, estableciendo la normalización de recursos negativos y definiendo las condiciones de derrota del jugador.
+- What I did today:
+  I implemented the `verify_state` function, establishing resource normalization for negative values and defining player defeat conditions.
 
-- Qué haré mañana:
-  Integrar la validación de estado dentro del ciclo principal del motor y realizar pruebas de funcionamiento.
+- What I will do tomorrow:
+  Integrate state validation within the main engine cycle and perform functionality tests.
 
-- Bloqueos:
-  No se presentaron bloqueos.
+- Blockers:
+  No blockers were presented.
 
 
 ### Saul (eventos.py)
 
-- Qué hice hoy:
-  Implementé la generación de eventos aleatorios y la lógica de aplicación de efectos según la dificultad seleccionada.
+- What I did today:
+  I implemented random event generation and the logic for applying effects based on the selected difficulty.
 
-- Qué haré mañana:
-  Ajustar la interacción entre eventos y el módulo de estado para validar condiciones posteriores a cada evento.
+- What I will do tomorrow:
+  Adjust the interaction between events and the state module to validate conditions after each event.
 
-- Bloqueos:
-  No se presentaron bloqueos.
+- Blockers:
+  No blockers were presented.
 
 
 ### Angela (consumo.py)
 
-- Qué hice hoy:
-  Implementé la lógica inicial del cálculo de consumo de recursos en función de la población del jugador.
+- What I did today:
+  I implemented the initial logic for calculating resource consumption based on the player's population.
 
-- Qué haré mañana:
-  Integrar el módulo con el motor principal y validar que el consumo se aplique correctamente en cada día del ciclo.
+- What I will do tomorrow:
+  Integrate the module with the main engine and validate that consumption is applied correctly each day of the cycle.
 
-- Bloqueos:
-  Sí.
-  No fue posible realizar el push al repositorio debido a un problema de autenticación en Git. Los cambios permanecen en entorno local.
+- Blockers:
+  Yes.
+  It was not possible to push to the repository due to a Git authentication problem. Changes remain in the local environment.
 
 
 ### Elianis (interfaz.py)
 
-- Qué hice hoy:
-  Implementé la estructura inicial de impresión en consola utilizando `colorama` para mejorar la apariencia visual del juego. Se añadieron condicionales para cambiar el color según la cantidad de recursos disponibles.
+- What I did today:
+  I implemented the initial console printing structure using `colorama` to improve the game's visual appearance. Conditionals were added to change color based on available resources.
 
-- Qué haré mañana:
-  Ajustar la presentación visual para integrarla con los datos reales generados por el motor del juego.
+- What I will do tomorrow:
+  Adjust the visual presentation to integrate with real data generated by the game engine.
 
-- Bloqueos:
-  Sí.
-  Problema de autenticación en Git que impidió subir los cambios al repositorio.
+- Blockers:
+  Yes.
+  Git authentication problem that prevented uploading changes to the repository.
 
 
 ### Melissa (motor.py)
 
-- Qué hice hoy:
-  Avancé en la estructura del ciclo principal del juego, definiendo el bucle de días y preparando la integración con los módulos de eventos, consumo y estado.
+- What I did today:
+  I advanced in the main game cycle structure, defining the day loop and preparing integration with events, consumption, and state modules.
 
-- Qué haré mañana:
-  Completar la integración entre módulos y validar el flujo completo del juego.
+- What I will do tomorrow:
+  Complete module integration and validate the complete game flow.
 
-- Bloqueos:
-  No se presentaron bloqueos.
+- Blockers:
+  No blockers were presented.
 
 
 ### Gustavo (Scrum Master / README)
 
-- Qué hice hoy:
-  Realicé revisión técnica de los módulos desarrollados para asegurar coherencia en estructura, tipado y flujo general del proyecto. Supervisé el estado de los commits y apoyé en la resolución de problemas relacionados con Git.
+- What I did today:
+  I performed a technical review of the developed modules to ensure coherence in structure, typing, and general project flow. I supervised the commit status and supported in resolving Git-related problems.
 
-- Qué haré mañana:
-  Coordinar la integración de los módulos pendientes y continuar con la documentación del proyecto.
+- What I will do tomorrow:
+  Coordinate the integration of pending modules and continue with project documentation.
 
-- Bloqueos:
+- Blockers:
   No.
 
 
 ### Gustavo (Scrum Master / README)
 
-- Qué hice hoy:
-  Realicé una revisión de la estructura de ramas del repositorio y consolidé el desarrollo en la rama `dev`, eliminando las ramas `feature/*` ya integradas para simplificar el flujo de trabajo. Se sincronizaron los módulos principales y se verificó la correcta actualización del repositorio remoto.
+- What I did today:
+  I reviewed the repository branch structure and consolidated development in the `dev` branch, eliminating the already integrated `feature/*` branches to simplify the workflow. Main modules were synchronized and remote repository updates were verified.
 
-- Qué haré mañana:
-  Coordinar la integración final entre módulos y continuar con la documentación técnica del proyecto.
+- What I will do tomorrow:
+  Coordinate the final integration between modules and continue with the project's technical documentation.
 
-- Bloqueos:
+- Blockers:
   No.
  
 ---
@@ -274,89 +274,89 @@
 ## Daily Scrum - 06/03/26
 
 
-### Equipo completo (Product Owner, Scrum Master, T.L y Developers)
+### Full Team (Product Owner, Scrum Master, T.L and Developers)
 
-- Qué hicimos hoy:
-  Nos reunimos para definir un nuevo flujo de trabajo en el repositorio. 
-  Debido a que las ramas `feature/*` fueron eliminadas, se acordó que a partir de ahora todos los desarrolladores trabajarán directamente sobre la rama `dev`, modificando únicamente el archivo correspondiente a su módulo asignado.
+- What we did today:
+  We met to define a new workflow in the repository. 
+  Since the `feature/*` branches were eliminated, it was agreed that from now on all developers will work directly on the `dev` branch, modifying only the file corresponding to their assigned module.
 
-- Qué haremos mañana:
-  Presentar al cliente un **MVP (Minimum Viable Product)** del juego con los módulos principales integrados.
+- What we will do tomorrow:
+  Present to the client an **MVP (Minimum Viable Product)** of the game with the main modules integrated.
 
-- Bloqueos:
-  No se presentaron bloqueos.
+- Blockers:
+  No blockers were presented.
 
 
 ### Saul (eventos.py)
 
-- Qué hice hoy:
-  Documenté el código del módulo `eventos.py`, añadiendo comentarios en inglés para mejorar la comprensión de la lógica implementada.
+- What I did today:
+  I documented the `eventos.py` module code, adding English comments to improve understanding of the implemented logic.
 
-- Qué haré mañana:
-  Implementar el uso de la función `max()` para evitar valores negativos en los recursos cuando ocurran eventos. Además, evaluar el uso de `colorama` para mejorar la visualización de los eventos en consola.
+- What I will do tomorrow:
+  Implement the use of the `max()` function to avoid negative resource values when events occur. Also, evaluate the use of `colorama` to improve event visualization in the console.
 
-- Bloqueos:
+- Blockers:
   No.
 
 
 ### Angela (consumo.py)
 
-- Qué hice hoy:
-  Implementé las funciones `consume` y `market_logic` para manejar la lógica de consumo diario de recursos y las acciones del mercado según el precio del trigo.
+- What I did today:
+  I implemented the `consume` and `market_logic` functions to handle daily resource consumption logic and market actions based on wheat price.
 
-- Qué haré mañana:
-  Revisar posibles mejoras en la lógica del consumo y validar su correcta integración con el motor del juego.
+- What I will do tomorrow:
+  Review possible improvements in consumption logic and validate correct integration with the game engine.
 
-- Bloqueos:
+- Blockers:
   No.
 
 
 ### Elianis (interfaz.py)
 
-- Qué hice hoy:
-  Continué trabajando en la presentación visual del juego en consola, utilizando `colorama` para diferenciar los recursos mediante colores y mejorar la claridad de la información mostrada al jugador.
+- What I did today:
+  I continued working on the game's console visual presentation, using `colorama` to differentiate resources by colors and improve the clarity of information shown to the player.
 
-- Qué haré mañana:
-  Ajustar la interfaz para integrarla con los datos generados por el motor del juego y los demás módulos.
+- What I will do tomorrow:
+  Adjust the interface to integrate with data generated by the game engine and other modules.
 
-- Bloqueos:
+- Blockers:
   No.
 
 
 ### Melissa (motor.py)
 
-- Qué hice hoy:
-  Continué integrando los distintos módulos del juego dentro del bucle principal del motor, verificando que la ejecución siga el orden correcto entre eventos, consumo y verificación de estado.
+- What I did today:
+  I continued integrating the different game modules within the main engine loop, verifying that execution follows the correct order between events, consumption, and state verification.
 
-- Qué haré mañana:
-  Realizar pruebas de ejecución completa del juego para validar el flujo del ciclo de días.
+- What I will do tomorrow:
+  Perform complete game execution tests to validate the day cycle flow.
 
-- Bloqueos:
+- Blockers:
   No.
 
 
 ### Juan (estado.py)
 
-- Qué hice hoy:
-  Revisé la lógica de validación del estado del jugador y ajusté las condiciones de derrota para garantizar coherencia con los cambios realizados en otros módulos.
+- What I did today:
+  I reviewed the player state validation logic and adjusted defeat conditions to ensure coherence with changes made in other modules.
 
-- Qué haré mañana:
-  Realizar pruebas adicionales para asegurar que las condiciones de victoria o derrota se evalúan correctamente.
+- What I will do tomorrow:
+  Perform additional tests to ensure victory or defeat conditions are evaluated correctly.
 
-- Bloqueos:
+- Blockers:
   No.
 
 
 ### Gustavo (Scrum Master / README)
 
-- Qué hice hoy:
-  Realicé una revisión general del código del proyecto para asegurar coherencia entre módulos. 
-  Se aplicaron refactorizaciones en `inicio.py`, `estado.py`, `eventos.py` y `consumo.py`, reemplazando el uso de listas por diccionarios para mejorar la legibilidad y el mantenimiento del código. 
-  También se añadieron **docstrings** en las funciones para estandarizar la documentación interna del proyecto.
-  Sincronicé el repositorio con la rama dev del proyecto y resolví conflictos de merge en `consumo.py`
+- What I did today:
+  I performed a general code review of the project to ensure coherence between modules. 
+  Refactorings were applied in `inicio.py`, `estado.py`, `eventos.py`, and `consumo.py`, replacing the use of lists with dictionaries to improve readability and code maintenance. 
+  **Docstrings** were also added to functions to standardize internal project documentation.
+  The repository was synchronized with the project's dev branch and merge conflicts in `consumo.py` were resolved.
 
-- Qué haré mañana:
-  Coordinar la presentación del **MVP** al cliente y continuar con la mejora de la documentación del proyecto.
+- What I will do tomorrow:
+  Coordinate the **MVP** presentation to the client and continue improving project documentation.
 
-- Bloqueos:
+- Blockers:
   No.
