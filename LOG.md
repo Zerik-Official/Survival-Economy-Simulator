@@ -273,57 +273,89 @@
 
 ## Daily Scrum - 06/03/26
 
+
 ### Equipo completo (Product Owner, Scrum Master, T.L y Developers)
 
 - Qué hicimos hoy:
-  Nos reunimos para comunicar el cómo nos manejariamos con las ramas en el repositorio ahora, puesto que las ramas `feature/*` fueron eliminadas, ahora todos trabajaron bajo la rama dev, modificando nada más su archivo asignado. 
+  Nos reunimos para definir un nuevo flujo de trabajo en el repositorio. 
+  Debido a que las ramas `feature/*` fueron eliminadas, se acordó que a partir de ahora todos los desarrolladores trabajarán directamente sobre la rama `dev`, modificando únicamente el archivo correspondiente a su módulo asignado.
 
 - Qué haremos mañana:
-  Presentar un M.V.P de lo que llevamos al cliente al cliente.
+  Presentar al cliente un **MVP (Minimum Viable Product)** del juego con los módulos principales integrados.
 
 - Bloqueos:
   No se presentaron bloqueos.
 
-### Gustavo (Scrum Master / README)
+
+### Saul (eventos.py)
 
 - Qué hice hoy:
-  Realicé una revisión de lo que se lleva en el proyecto, inicio.py, eventos.py, consumo.py, interfaz.py, etc. Y empecé a añadir comentarios DOCSTRINGS a cada función
+  Documenté el código del módulo `eventos.py`, añadiendo comentarios en inglés para mejorar la comprensión de la lógica implementada.
 
 - Qué haré mañana:
-  Explicar al equipo, que de ahora en adelante, documentaremos cada función usando DOCSTRINGS, con el formato de pequeña descripción de lo que hace la función, argumentos y returns.
+  Implementar el uso de la función `max()` para evitar valores negativos en los recursos cuando ocurran eventos. Además, evaluar el uso de `colorama` para mejorar la visualización de los eventos en consola.
 
 - Bloqueos:
   No.
 
-### Gustavo (Scrum Master / README)
+
+### Angela (consumo.py)
 
 - Qué hice hoy:
-  Realicé una revisión en `inicio.py` y hice unas refactorizaciones con respecto al bucle en entry_difficulty, además que ahora `choose_difficulty()` retorna un diccionario con los recursos dependiendo de la dificultad, para facilitar su uso en otros archivos
+  Implementé las funciones `consume` y `market_logic` para manejar la lógica de consumo diario de recursos y las acciones del mercado según el precio del trigo.
 
 - Qué haré mañana:
-  Presentar el M.V.P al cliente.
+  Revisar posibles mejoras en la lógica del consumo y validar su correcta integración con el motor del juego.
 
 - Bloqueos:
   No.
 
-### Gustavo (Scrum Master / README)
+
+### Elianis (interfaz.py)
 
 - Qué hice hoy:
-  Realicé una revisión en `estado.py` para ver como manejaba las condiciones de derrota y realicé un refactor de la función, para usar dicciones en vez de listas, para facilitar la lectura y el mantenimiento del código.
+  Continué trabajando en la presentación visual del juego en consola, utilizando `colorama` para diferenciar los recursos mediante colores y mejorar la claridad de la información mostrada al jugador.
 
 - Qué haré mañana:
-  Presentar el M.V.P al cliente.
+  Ajustar la interfaz para integrarla con los datos generados por el motor del juego y los demás módulos.
 
 - Bloqueos:
   No.
 
+
+### Melissa (motor.py)
+
+- Qué hice hoy:
+  Continué integrando los distintos módulos del juego dentro del bucle principal del motor, verificando que la ejecución siga el orden correcto entre eventos, consumo y verificación de estado.
+
+- Qué haré mañana:
+  Realizar pruebas de ejecución completa del juego para validar el flujo del ciclo de días.
+
+- Bloqueos:
+  No.
+
+
+### Juan (estado.py)
+
+- Qué hice hoy:
+  Revisé la lógica de validación del estado del jugador y ajusté las condiciones de derrota para garantizar coherencia con los cambios realizados en otros módulos.
+
+- Qué haré mañana:
+  Realizar pruebas adicionales para asegurar que las condiciones de victoria o derrota se evalúan correctamente.
+
+- Bloqueos:
+  No.
+
+
 ### Gustavo (Scrum Master / README)
 
 - Qué hice hoy:
-  Realicé una revisión en `eventos.py` para ver como manejaba la generación de eventos y realicé un refactor para usar diccionarios en vez de listas, para facilitar la lectura y el mantenimiento del código. Además, de moficiar varios eventos, debido a una confusión del developer, añadió eventos que no corresponden a nuestra ambientación, como lluvia acida, por lo que tuve que eliminar esos eventos y añadir eventos más acordes a la ambientación del juego.
+  Realicé una revisión general del código del proyecto para asegurar coherencia entre módulos. 
+  Se aplicaron refactorizaciones en `inicio.py`, `estado.py`, `eventos.py` y `consumo.py`, reemplazando el uso de listas por diccionarios para mejorar la legibilidad y el mantenimiento del código. 
+  También se añadieron **docstrings** en las funciones para estandarizar la documentación interna del proyecto.
 
 - Qué haré mañana:
-  Presentar el M.V.P al cliente.
+  Coordinar la presentación del **MVP** al cliente y continuar con la mejora de la documentación del proyecto.
 
 - Bloqueos:
   No.
