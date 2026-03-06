@@ -316,3 +316,14 @@
 
 - Bloqueos:
   No.
+
+### Gustavo (Scrum Master / README)
+
+- Qué hice hoy:
+  Realicé una revisión en `eventos.py` para ver como manejaba la generación de eventos y realicé un refactor para usar diccionarios en vez de listas, para facilitar la lectura y el mantenimiento del código. Además, de moficiar varios eventos, debido a una confusión del developer, añadió eventos que no corresponden a nuestra ambientación, como lluvia acida, por lo que tuve que eliminar esos eventos y añadir eventos más acordes a la ambientación del juego.
+
+- Qué haré mañana:
+  Presentar el M.V.P al cliente.
+
+- Bloqueos:
+  No.
