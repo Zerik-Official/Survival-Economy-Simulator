@@ -44,3 +44,5 @@ def verify_state(resources:dict[str, int | float]) -> bool:
     elif firewood == 0:  
         print("GAME OVER: You ran out of firewood")
         return False
+
+    return True
