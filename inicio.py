@@ -33,7 +33,7 @@ def entry_difficulty() -> str:
         print("2) Normal")
         print("3) Hard")
 
-        difficulty:str = input("Choose difficulty: ").strip()
+        difficulty:str = input("Choose difficulty (1-3): ").strip()
 
         if difficulty not in difficulty_map:
             print("Please enter a valid option.")
