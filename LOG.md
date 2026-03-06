@@ -353,6 +353,7 @@
   Realicé una revisión general del código del proyecto para asegurar coherencia entre módulos. 
   Se aplicaron refactorizaciones en `inicio.py`, `estado.py`, `eventos.py` y `consumo.py`, reemplazando el uso de listas por diccionarios para mejorar la legibilidad y el mantenimiento del código. 
   También se añadieron **docstrings** en las funciones para estandarizar la documentación interna del proyecto.
+  Sincronicé el repositorio con la rama dev del proyecto y resolví conflictos de merge en `consumo.py`
 
 - Qué haré mañana:
   Coordinar la presentación del **MVP** al cliente y continuar con la mejora de la documentación del proyecto.
