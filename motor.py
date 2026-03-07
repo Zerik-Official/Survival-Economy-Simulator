@@ -9,21 +9,20 @@
 # --- Import files -----------------------------------------------
 # We import the necessary files for the game to function, such as the interface, events, consumption, and state.
 
+# Libraries
 import random
-from inicio import entry_difficulty, choose_difficulty, name
-from interfaz import color_off_resource, show_resources_list
-from consumo import consume, market_logic
+
+# Internal modules
 from estado import verify_state
 from eventos import apply_event
-
+from interfaz import show_resources_list
+from consumo import consume, market_logic
+from inicio import entry_difficulty, choose_difficulty, name
 
 # --- Day cycle -----------------------------------------------
 # We start the day cycle, iterating through the information of each day.
 
 day_of_weeks: list[str] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-current_day: int = 1
-game_active: bool = True
-
 
 
 def init_engine() -> tuple[str, dict[str, int | float], str]:
@@ -49,8 +48,9 @@ def init_engine() -> tuple[str, dict[str, int | float], str]:
 
 def day_cycle():
 
-    global current_day
-    global game_active
+    # Game state variables
+    current_day: int = 1
+    game_active: bool = True
 
     random_entry_day: int = random.randint(0, len(day_of_weeks) - 1)
     
@@ -62,9 +62,6 @@ def day_cycle():
         
         current_day_text: str = day_of_weeks[random_entry_day % len(day_of_weeks)]
 
-        print("\n============================================================================================")
-        print(f"👤 Player: {name.capitalize()} | 📅 Day {current_day} - {current_day_text}")
-        print("============================================================================================\n")
 
         # Show resources
         show_resources_list(name, current_day, current_day_text, resources)
@@ -74,7 +71,7 @@ def day_cycle():
         apply_event(difficulty, resources)
 
         print("\n--- CONSUMPTION ---")
-        consume(resources)
+        consume(resources, current_day_text)
 
         print("\n--- MARKET ---")
         market_logic(resources)
