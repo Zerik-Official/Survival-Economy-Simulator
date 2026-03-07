@@ -25,10 +25,11 @@ from inicio import entry_difficulty, choose_difficulty, name
 day_of_weeks: list[str] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 
-def init_engine() -> tuple[str, dict[str, int | float], str]:
+def init_engine() -> tuple[str, dict[str, int | float]]:
     """
     init_engine initializes the game engine by prompting the player to choose a difficulty level and setting up the initial resources based on that choice.
     It returns the chosen difficulty and the initial resources for the game.
+
     Args:
         None
     Returns:
@@ -71,17 +72,18 @@ def day_cycle() -> None:
         
         current_day_text: str = day_of_weeks[random_entry_day % len(day_of_weeks)]
 
-
         # Show resources
         show_resources_list(name, current_day, current_day_text, resources)
 
-
+        # Show event, apply it, consume resources, and check the state of the game.
         print("\n--- EVENT ---")
         apply_event(difficulty, resources)
 
+        # Consume resources and apply market logic, then check the state of the game.
         print("\n--- CONSUMPTION ---")
         consume(resources, current_day_text)
 
+        # Apply market logic and check the state of the game.
         print("\n--- MARKET ---")
         market_logic(resources)
 
