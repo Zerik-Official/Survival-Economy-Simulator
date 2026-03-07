@@ -46,7 +46,16 @@ def init_engine() -> tuple[str, dict[str, int | float], str]:
 # Main game loop. Iterates through each day (1 to 10) while the game remains active.
 # On each day, it waits for player input, updates the day, and reloads all game modules.
 
-def day_cycle():
+def day_cycle() -> None:
+    """
+    Day cycle is the main function that runs the game loop. It manages the progression of days, updates resources, applies events, and checks the game state.
+    The function continues to run until the player either survives 10 days or the game state indicates that the village did not survive.
+    
+    Args:
+        None
+    Returns:
+        None
+    """
 
     # Game state variables
     current_day: int = 1
@@ -79,10 +88,8 @@ def day_cycle():
         print("\n--- STATE CHECK ---")
         game_active = verify_state(resources)
 
-        if not game_active:
-            break
-
-        input("\nPress ENTER to pass the day...")
+        if game_active:
+            input("\nPress ENTER to pass the day...")
         
         current_day += 1
         random_entry_day += 1
