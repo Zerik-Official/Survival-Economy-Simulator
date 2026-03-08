@@ -271,7 +271,7 @@
  
 ---
 
-## Daily Scrum - 06/03/26
+## Daily Scrum - 05/03/26
 
 
 ### Full Team (Product Owner, Scrum Master, T.L and Developers)
@@ -357,6 +357,127 @@
 
 - What I will do tomorrow:
   Coordinate the **MVP** presentation to the client and continue improving project documentation.
+
+- Blockers:
+  No.
+
+## Daily Scrum - 06/03/26
+
+### Full Team (Product Owner, Scrum Master, T.L and Developers)
+
+- What we did today:
+  We presented the **MVP of the game** to the client, demonstrating the integration of the main modules and the basic gameplay loop. 
+  The client provided positive feedback and suggested improvements related to gameplay balance and interface clarity.
+
+- What we will do tomorrow:
+  Continue improving the consumption system and implement daily modifiers depending on the day of the week.
+
+- Blockers:
+  No technical blockers were reported.
+
+
+### Gustavo (Scrum Master / README)
+
+- What I did today:
+  I coordinated the MVP presentation and helped organize the remaining improvements that the team needed to implement after the client's feedback.
+
+- What I will do tomorrow:
+  Continue improving the project documentation and start preparing a `tests.py` file to validate the main game functions.
+
+- Blockers:
+  I experienced a minor emotional blocker because our team was not called to present directly like other teams, but I refocused on coordinating improvements for the project.
+
+## Daily Scrum - 07/03/26
+
+### Full Team (Product Owner, Scrum Master, T.L and Developers)
+
+- What we did today:
+  The team continued improving the internal logic of the game after the MVP presentation. 
+  Several refactors were applied to improve code structure, fix return types in the game engine, and implement the daily consumption modifier based on the day of the week.
+
+- What we will do tomorrow:
+  Continue testing the game loop and ensure all modules interact correctly before the next iteration.
+
+- Blockers:
+  No blockers were reported.
+
+### Angela (consumo.py)
+
+- What I did today:
+  I implemented the **daily resource consumption modifier** depending on the day of the week and removed the rationing system to simplify the gameplay logic. 
+  I also adjusted the `consume()` function to integrate the new modifier and updated the market logic accordingly.
+
+- What I will do tomorrow:
+  Continue testing the consumption system to ensure the modifiers work correctly and maintain game balance.
+
+- Blockers:
+  No.
+
+### Saul (eventos.py)
+
+- What I did today:
+  I implemented color visualization for resource loss during events using `colorama` to improve the console feedback shown to the player.
+
+- What I will do tomorrow:
+  Continue reviewing the event system and ensure events correctly affect the resource values.
+
+- Blockers:
+  No.
+
+### Melissa (motor.py)
+
+- What I did today:
+  I corrected the `init_engine()` function return type and refactored the main game loop by removing an unnecessary `break` statement in the `day_cycle` logic.
+
+- What I will do tomorrow:
+  Continue validating the game engine integration with the rest of the modules.
+
+- Blockers:
+  No.
+
+### Elianis (interfaz.py)
+
+- What I did today:
+  I continued improving the console interface and adjusted the resource display formatting to make the game information clearer for the player.
+
+- What I will do tomorrow:
+  Integrate additional interface improvements and verify compatibility with the game engine output.
+
+- Blockers:
+  No.
+
+### Gustavo (Scrum Master / README)
+
+- What I did today:
+  I reviewed the repository commits and ensured that the refactors and fixes made by the team were properly integrated into the `dev` branch.
+
+- What I will do tomorrow:
+  Continue monitoring the project progress and help maintain documentation consistency across modules.
+
+- Blockers:
+  No.
+
+## Daily Scrum - 08/03/26
+
+### Elianis (interfaz.py)
+
+- What I did today:
+  I improved the resources display by adding day and player information to the console output. I also improved the docstrings across the module to better document the implemented functions.
+
+- What I will do tomorrow:
+  Continue verifying compatibility between the interface output and the rest of the game modules.
+
+- Blockers:
+  No.
+
+
+### Gustavo (Scrum Master / README)
+
+- What I did today:
+  I updated the `LOG.md` file with the 07/03/26 daily scrum entries. I updated the project's `README.md` file to reflect the latest changes made to the codebase. I also applied minor corrections to the dependency installation section and the team table in the README.
+
+- What I will do tomorrow:
+  Continue monitoring project progress and ensure documentation stays consistent with the current state of the code.
 
 - Blockers:
   No.
