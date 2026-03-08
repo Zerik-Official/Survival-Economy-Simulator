@@ -6,13 +6,8 @@
 #===========================================================================
 from colorama import init, Fore, Style
 
-ICONS = {
-    "firewood":   "🪵",
-    "wheat":      "🌾",
-    "gold":       "💰",
-    "population": "👥",
-}
-
+# Separator for formatting the output
+separator: str = "=" * 50
 
 def color_off_resource(quantity: int) -> str:
     """
@@ -45,11 +40,13 @@ def show_resources_list(player_name:str, current_day:int, current_day_text:str, 
     Returns:
         None
     """
+    print(separator)
+    print(f"| Days: {current_day} | Day_week: {current_day_text} | Player: {player_name.capitalize()}")
+    print(separator)
+    print(f"  ⚔️  Medieval village resources  ⚔️")
     print()
-    print(f"  ⚔️  Kingdom Resources  ⚔️")
-    print()
-    print(f"  {ICONS['firewood']} firewood {color_off_resource(resources['firewood'])}{resources['firewood']}{Style.RESET_ALL}")
-    print(f"  {ICONS['wheat']} wheat {color_off_resource(resources['wheat'])}{resources['wheat']}{Style.RESET_ALL}")
-    print(f"  {ICONS['gold']} gold {color_off_resource(resources['gold'])}{resources['gold']}{Style.RESET_ALL}")
-    print(f"  {ICONS['population']} population {resources['population']}")
-    print()
+    print(f"  🌲 Firewood: {color_off_resource(resources['firewood'])}{resources['firewood']}{Style.RESET_ALL}")
+    print(f"  🌾 Wheat: {color_off_resource(resources['wheat'])}{resources['wheat']}{Style.RESET_ALL}")
+    print(f"  💰 Gold: {color_off_resource(resources['gold'])}{resources['gold']}{Style.RESET_ALL}")
+    print(f"  👥 Population: {resources['population']}")
+    print(separator)
