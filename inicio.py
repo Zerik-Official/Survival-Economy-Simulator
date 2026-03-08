@@ -5,6 +5,8 @@
 #              global variables based on the difficulty level.
 # ================================================================
 import random
+from colorama import Fore, Style, init 
+init(autoreset=True)
 
 
 # ======================== WELCOME MESSAGE ========================
@@ -29,9 +31,9 @@ def entry_difficulty() -> str:
 
     while difficulty not in difficulty_map:
         print("Choose your difficulty:")
-        print("1) Easy")
-        print("2) Normal")
-        print("3) Hard")
+        print(f"1){Fore.GREEN} Easy")
+        print(f"2){Fore.YELLOW} Normal")
+        print(f"3){Fore.RED} Hard")
 
         difficulty:str = input("Choose difficulty (1-3): ").strip()
 
