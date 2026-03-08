@@ -53,7 +53,7 @@ def apply_event(difficulty: str, resources: dict[str, int | float]) -> None:
     if r2 <= limits[0]:
         print("A snowstorm is approaching!")
         loss = 10 if difficulty == "1" else 12 if difficulty == "2" else 15
-        print(f"{Fore.REDYou}[EVENT] lose {loss} firewood!{Style.RESET_ALL}")
+        print(f"{Fore.RED}[EVENT]You lose {loss} firewood!{Style.RESET_ALL}")
         resources['firewood'] -= loss
     # Plague that destroys wheat
     elif r2 <= limits[1]:
