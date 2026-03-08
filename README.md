@@ -229,7 +229,7 @@ The log covers the following sessions:
 | Developer        | Angela Manjarres   | consumo.py    |
 | Developer        | Elianis Cervantes  | interfaz.py   |
 | Developer        | Juan Jose Varela   | estado.py     |
-| Scrum Master     | Gustavo            | README / LOG and prueas.py  |
+| Scrum Master     | Gustavo            | README / LOG and pruebas.py  |
 
 
 > Project version 1.0
