@@ -163,16 +163,6 @@ Once activated, your terminal prompt will show the environment name, for example
 
 ### 4. Install dependencies
 
-```bash
-pip install colorama
-```
-
-To freeze the current dependencies for reproducibility:
-
-```bash
-pip freeze > requirements.txt
-```
-
 To install from an existing `requirements.txt`:
 
 ```bash
