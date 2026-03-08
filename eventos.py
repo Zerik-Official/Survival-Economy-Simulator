@@ -4,7 +4,6 @@
 # Each event has a certain probability of occurring and can affect the player's resources in different ways.
 
 import random
-import colorama
 from colorama import Fore, Style
 
 # This function calculates the probability limits for each event based on difficulty
