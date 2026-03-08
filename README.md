@@ -220,16 +220,16 @@ The log covers the following sessions:
 
 ## Team
 
-| Role             | Name               | Module        |
-|------------------|--------------------|---------------|
-| Developer        | Deyanis Martelo    | inicio.py     |
-| Developer        | Laimen Mejia       | inicio.py     |
-| Developer        | Melissa Garrido    | motor.py      |
-| Developer        | Saul Uribe         | eventos.py    |
-| Developer        | Angela Manjarres   | consumo.py    |
-| Developer        | Elianis Cervantes  | interfaz.py   |
-| Developer        | Juan Jose Varela   | estado.py     |
-| Scrum Master     | Gustavo            | README / LOG and pruebas.py  |
+| Role          | Name             | Module                  | Profile                          |
+|---------------|------------------|-------------------------|----------------------------------|
+| Developer     | Deyanis Martelo  | inicio.py               | https://github.com/laimenmejia18 |
+| Developer     | Laimen Mejia     | inicio.py               | https://github.com/Deymartelo22  |
+| T.L           | Melissa Garrido  | motor.py                | https://github.com/melissagarridos |
+| Developer     | Saul Uribe       | eventos.py              | https://github.com/Sauhul        |
+| Product Owner | Angela Manjarres | consumo.py              | https://github.com/angelamanjarres9-del |
+| Developer     | Elianis Cervantes| interfaz.py             | https://github.com/elianis20     |
+| Developer     | Juan Jose Varela | estado.py               | https://github.com/IamJuan201    |
+| Scrum Master  | Gustavo          | README / LOG and pruebas.py | https://github.com/Zerik-Official |
 
 
 > Project version 1.0
