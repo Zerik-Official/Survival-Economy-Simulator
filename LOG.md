@@ -456,3 +456,28 @@
 
 - Blockers:
   No.
+
+## Daily Scrum - 08/03/26
+
+### Elianis (interfaz.py)
+
+- What I did today:
+  I improved the resources display by adding day and player information to the console output. I also improved the docstrings across the module to better document the implemented functions.
+
+- What I will do tomorrow:
+  Continue verifying compatibility between the interface output and the rest of the game modules.
+
+- Blockers:
+  No.
+
+
+### Gustavo (Scrum Master / README)
+
+- What I did today:
+  I updated the `LOG.md` file with the 07/03/26 daily scrum entries. I updated the project's `README.md` file to reflect the latest changes made to the codebase. I also applied minor corrections to the dependency installation section and the team table in the README.
+
+- What I will do tomorrow:
+  Continue monitoring project progress and ensure documentation stays consistent with the current state of the code.
+
+- Blockers:
+  No.
