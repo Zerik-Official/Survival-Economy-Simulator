@@ -34,6 +34,7 @@ def show_resources_list(player_name:str, current_day:int, current_day_text:str, 
     Display the current resources and day information in a formatted manner.
 
     Args:
+        player_name (str): The name of the player.
         current_day (int): The current day number.
         current_day_text (str): The text representation of the current day.
         resources (dict[str, int | float]): A dictionary containing the quantities of each resource.
