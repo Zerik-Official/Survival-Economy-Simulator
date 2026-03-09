@@ -474,10 +474,58 @@
 ### Gustavo (Scrum Master / README)
 
 - What I did today:
-  I updated the `LOG.md` file with the 07/03/26 daily scrum entries. I updated the project's `README.md` file to reflect the latest changes made to the codebase. I also applied minor corrections to the dependency installation section and the team table in the README.
+  I updated the `LOG.md` file with the 07/03/26 daily scrum entries. I updated the project's `README.md` file to reflect the latest changes made to the codebase. I also applied minor corrections to the dependency installation section and the team table in the README. I added team profile links and an image to the beginning of the README. I also applied a small correction to the minimum population generation amount in the documentation.
 
 - What I will do tomorrow:
   Continue monitoring project progress and ensure documentation stays consistent with the current state of the code.
+
+- Blockers:
+  No.
+
+
+### Saul (eventos.py)
+
+- What I did today:
+  I corrected errors in the use of `colorama` to ensure color output works correctly in the console. I also improved event messages and color output throughout the module for better player feedback. I fixed a write error and removed an unused import that was left after previous refactoring.
+
+- What I will do tomorrow:
+  Continue reviewing the event system and ensure all edge cases are handled correctly.
+
+- Blockers:
+  No.
+
+
+### Deyanis (inicio.py)
+
+- What I did today:
+  I added colors to the difficulty variables using `colorama` to improve the visual presentation of difficulty selection in the console.
+
+- What I will do tomorrow:
+  Continue reviewing the module and verifying compatibility with the rest of the game flow.
+
+- Blockers:
+  No.
+
+
+### Laimen (inicio.py / interfaz.py)
+
+- What I did today:
+  I implemented a function to validate the username input. I removed unused features and imports from `colorama` to keep the code clean. I corrected the minimum population generation range. I added a new logo for the game replacing the simple print. I fixed the difficulty display so it now appears before the game starts. I applied a correction to reset styles on each print at difficulty selection. I also fixed a spell checker issue on the logo.
+
+- What I will do tomorrow:
+  Continue improving the game's initial presentation and validate the full startup flow.
+
+- Blockers:
+  No.
+
+
+### Melissa (motor.py)
+
+- What I did today:
+  I added the function call to ask the user for their name as part of the engine initialization flow. I also corrected the docstrings in the `init_engine()` function to better reflect its behavior.
+
+- What I will do tomorrow:
+  Continue validating the game engine integration and ensure all modules interact correctly.
 
 - Blockers:
   No.
