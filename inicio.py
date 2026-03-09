@@ -5,9 +5,7 @@
 #              global variables based on the difficulty level.
 # ================================================================
 import random
-from colorama import Fore, Style, init 
-init(autoreset=True)
-
+from colorama import Fore
 
 # ======================== WELCOME MESSAGE ========================
 print("============ WELCOME TO THE GAME SURVIVAL TO THE EXTREME ===========")
