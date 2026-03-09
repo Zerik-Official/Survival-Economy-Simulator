@@ -42,7 +42,7 @@ The player wins by surviving all 10 days without running out of firewood, wheat,
 | Normal (2) | 50       | 50    | 50   | Medium       |
 | Hard (3)   | 20       | 20    | 20   | High         |
 
-Population is randomly assigned between 1 and 6 for all difficulty levels.
+Population is randomly assigned between 2 and 6 for all difficulty levels.
 
 ### Defeat Conditions
 
@@ -98,14 +98,15 @@ Events are governed by a probability system scaled to the chosen difficulty. The
 ├── consumo.py      # Daily resource consumption and market logic.
 ├── estado.py       # Validates resource limits and checks defeat conditions.
 ├── interfaz.py     # Console display with color-coded resource output.
+├── pruebas.py      # Unit tests for all modules.
 ├── README.md       # This file.
 └── LOG.md          # Daily Scrum records for all team members.
 ```
 
 ### Module Responsibilities
 
-**motor.py** is the entry point of the game. It imports and coordinates all other modules, runs the main `while` loop across 10 days, and decides whether the player has won or lost. The `init_engine()` function returns a `tuple[str, dict[str, int | float]]` with the chosen difficulty and initial resources.
-
+**motor.py** is the entry point of the game. It imports and coordinates all other modules, runs the main `while` loop across 10 days, and decides whether the player has won or lost. The `init_engine()` function returns a `tuple[str, str, dict[str, int | float]]` with the player's name, chosen difficulty, and initial resources.
+    
 **inicio.py** prompts the player for their name and difficulty preference, then initializes the `resources` dictionary that is passed through the rest of the game.
 
 **eventos.py** uses `random.randint` to select a daily event. Probability thresholds are calculated dynamically based on difficulty. Each event modifies the `resources` dictionary directly. Resource losses are printed in red using `colorama`; a peaceful day is printed in green.
@@ -115,6 +116,8 @@ Events are governed by a probability system scaled to the chosen difficulty. The
 **estado.py** normalizes any negative resource values to zero, then checks whether any defeat condition applies. Returns `True` if the game continues, `False` if the player has lost.
 
 **interfaz.py** uses `colorama` to display resources with color feedback: red when the quantity is below 60, yellow between 60 and 80, and green above 80. It also shows the current day number, day of the week, and player name in a formatted header.
+
+**pruebas.py** contains unit tests for all functions across the modules, ensuring that logic is correct and edge cases are handled.
 
 ---
 
@@ -233,7 +236,7 @@ The log covers the following sessions:
 | Product Owner | Angela Manjarres | consumo.py              | https://github.com/angelamanjarres9-del |
 | Developer     | Elianis Cervantes| interfaz.py             | https://github.com/elianis20     |
 | Developer     | Juan Jose Varela | estado.py               | https://github.com/IamJuan201    |
-| Scrum Master  | Gustavo          | README / LOG and pruebas.py | https://github.com/Zerik-Official |
+| Scrum Master  | Gustavo          | README / LOG            | https://github.com/Zerik-Official |
 
 
 > Project version 1.0
