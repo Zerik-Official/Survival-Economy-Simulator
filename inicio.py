@@ -81,8 +81,8 @@ def choose_difficulty(difficulty:str) -> dict[str, int | float]:
     """
 
     
-    # Randomly generate the population between 1 and 6
-    population:int = random.randint(1, 6)
+    # Randomly generate the population between 2 and 6
+    population:int = random.randint(2, 6)
 
     # Easy respurces
     if difficulty == "1":
