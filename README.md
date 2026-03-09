@@ -98,7 +98,6 @@ Events are governed by a probability system scaled to the chosen difficulty. The
 ├── consumo.py      # Daily resource consumption and market logic.
 ├── estado.py       # Validates resource limits and checks defeat conditions.
 ├── interfaz.py     # Console display with color-coded resource output.
-├── pruebas.py      # Unit tests for all modules.
 ├── README.md       # This file.
 └── LOG.md          # Daily Scrum records for all team members.
 ```
