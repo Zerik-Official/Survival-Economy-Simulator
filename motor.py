@@ -17,7 +17,7 @@ from estado import verify_state
 from eventos import apply_event
 from interfaz import show_resources_list
 from consumo import consume, market_logic
-from inicio import entry_difficulty, choose_difficulty, name
+from inicio import entry_difficulty, choose_difficulty, get_player_name
 
 # --- Day cycle -----------------------------------------------
 # We start the day cycle, iterating through the information of each day.
@@ -25,7 +25,7 @@ from inicio import entry_difficulty, choose_difficulty, name
 day_of_weeks: list[str] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 
-def init_engine() -> tuple[str, dict[str, int | float]]:
+def init_engine() -> tuple[str, str, dict[str, int | float]]:
     """
     init_engine initializes the game engine by prompting the player to choose a difficulty level and setting up the initial resources based on that choice.
     It returns the chosen difficulty and the initial resources for the game.
@@ -33,16 +33,20 @@ def init_engine() -> tuple[str, dict[str, int | float]]:
     Args:
         None
     Returns:
+        name (str): The player's name.
         difficulty (str): The chosen difficulty level as a string ("1", "2", or "3").
         resources (dict[str, int | float]): A dictionary containing the initial resources for the game.
     """
+    # Get player name
+    name = get_player_name()
+
+    # Get difficulty level
     difficulty = entry_difficulty()
 
+    # Set up initial resources based on chosen difficulty
     resources = choose_difficulty(difficulty)
 
-
-
-    return difficulty, resources
+    return name, difficulty, resources
 
 # Main game loop. Iterates through each day (1 to 10) while the game remains active.
 # On each day, it waits for player input, updates the day, and reloads all game modules.
@@ -65,7 +69,7 @@ def day_cycle() -> None:
     random_entry_day: int = random.randint(0, len(day_of_weeks) - 1)
     
 
-    difficulty, resources = init_engine()
+    name, difficulty, resources = init_engine()
     
 
     while current_day <= 10 and game_active:
