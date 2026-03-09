@@ -13,8 +13,38 @@ init(autoreset=True)
 print("============ WELCOME TO THE GAME SURVIVAL TO THE EXTREME ===========")
 
 
-# Player name
-name:str = input("Please enter your name: ").strip().lower()
+def get_player_name() -> str:
+    """
+    Prompt the user to enter a valid name.
+
+    Validation rules:
+    - Must not be empty or only spaces
+    - Minimum length: 4 characters
+    - Maximum length: 13 characters
+    - Must contain only letters
+
+    Returns:
+        name (str): A validated name in lowercase.
+    """
+
+    valid:bool = False
+    name = ""
+
+    while not valid:
+        name: str = input("Please enter your name: ").strip().lower()
+
+        if not name:
+            print("Name cannot be empty.")
+        elif len(name) < 4:
+            print("Name must be at least 4 characters.")
+        elif len(name) > 13:
+            print("Name must be at most 13 characters.")
+        elif not name.isalpha():
+            print("Name must contain only letters.")
+        else:
+            valid = True
+
+    return name
 
 def entry_difficulty() -> str:
     """ 
