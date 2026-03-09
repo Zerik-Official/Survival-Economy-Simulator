@@ -76,6 +76,8 @@ def entry_difficulty() -> str:
         if difficulty not in difficulty_map:
             print("Please enter a valid option.")
 
+    # Show the chosen difficulty
+    print(f"Your difficulty is: {difficulty}")
     return difficulty
 
 def choose_difficulty(difficulty:str) -> dict[str, int | float]:
