@@ -233,7 +233,7 @@ The log covers the following sessions:
 | Developer     | Saul Uribe       | eventos.py              | https://github.com/Sauhul        |
 | Product Owner | Angela Manjarres | consumo.py              | https://github.com/angelamanjarres9-del |
 | Developer     | Elianis Cervantes| interfaz.py             | https://github.com/elianis20     |
-| Developer     | Juan Jose Varela | estado.py               | https://github.com/IamJuan201    |
+| Developer     | Juan Jose Varela | estado.py               | https://github.com/jjvalela0203-maker    |
 | Scrum Master  | Gustavo          | README / LOG            | https://github.com/Zerik-Official |
 
 
