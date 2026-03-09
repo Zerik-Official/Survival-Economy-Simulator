@@ -117,8 +117,6 @@ Events are governed by a probability system scaled to the chosen difficulty. The
 
 **interfaz.py** uses `colorama` to display resources with color feedback: red when the quantity is below 60, yellow between 60 and 80, and green above 80. It also shows the current day number, day of the week, and player name in a formatted header.
 
-**pruebas.py** contains unit tests for all functions across the modules, ensuring that logic is correct and edge cases are handled.
-
 ---
 
 ## Requirements
