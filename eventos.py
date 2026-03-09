@@ -1,8 +1,10 @@
 # Eventos.py
 # Author: Saul Uribe Hernandez
-# Description: This module defines the random events that can occur in the game based on the chosen difficulty level. Each event has a certain probability of occurring and can affect the player's resources in different ways.
+# Description: This module defines the random events that can occur in the game based on the chosen difficulty level. 
+# Each event has a certain probability of occurring and can affect the player's resources in different ways.
 
 import random
+from colorama import Fore, Style
 
 # This function calculates the probability limits for each event based on difficulty
 # The harder the difficulty, the more likely a bad event will occur
@@ -49,68 +51,64 @@ def apply_event(difficulty: str, resources: dict[str, int | float]) -> None:
     # I compare r2 against each limit to determine the event
     # If it falls within the first range, snowstorm
     if r2 <= limits[0]:
-        print("A snowstorm is approaching!")
+        print(f"{Fore.YELLOW}[EVENT_ENTERING]{Style.RESET_ALL} A snowstorm is approaching!")
         loss = 10 if difficulty == "1" else 12 if difficulty == "2" else 15
-        print(f"You lose {loss} firewood!")
+        print(f"{Fore.BLUE}[EVENT]{Style.RESET_ALL} You lose {loss} firewood!")
         resources['firewood'] -= loss
 
     # Plague that destroys wheat
     elif r2 <= limits[1]:
-        print("A plague is spreading and destroying the wheat!")
+        print(f"{Fore.YELLOW}[EVENT_ENTERING]{Style.RESET_ALL} A plague is spreading and destroying the wheat!")
         loss = 12 if difficulty == "1" else 15 if difficulty == "2" else 20
-        print(f"You lose {loss} wheat!")
+        print(f"{Fore.YELLOW}[EVENT]{Style.RESET_ALL} You lose {loss} wheat!")
         resources['wheat'] -= loss
 
     # Bandit attack: you lose gold and wheat price goes up
     elif r2 <= limits[2]:
-        print("Bandits are attacking the village!")
+        print(f"{Fore.YELLOW}[EVENT_ENTERING]{Style.RESET_ALL} Bandits are attacking the village!")
         gold_loss = 10 if difficulty == "1" else 12 if difficulty == "2" else 23
         wheat_rise = 2 if difficulty == "1" else 4 if difficulty == "2" else 6
-        print(f"You lose {gold_loss} gold and wheat price rises!")
+        print(f"{Fore.RED}[EVENT]{Style.RESET_ALL} You lose {gold_loss} gold and wheat price rises!")
         resources['gold'] -= gold_loss
         resources['wheat_price'] += wheat_rise
 
     # The river freezes, wheat is lost
     elif r2 <= limits[3]:
-        print("The village river has completely frozen over!")
+        print(f"{Fore.YELLOW}[EVENT_ENTERING]{Style.RESET_ALL} The village river has completely frozen over!")
         loss = 12 if difficulty == "1" else 15 if difficulty == "2" else 19
-        print(f"You lose {loss} wheat!")
+        print(f"{Fore.CYAN}[EVENT]{Style.RESET_ALL} You lose {loss} wheat!")
         resources['wheat'] -= loss
 
     # Blizzard destroys huts, firewood is lost
     elif r2 <= limits[4]:
-        print("A brutal blizzard has destroyed several huts in the village!")
+        print(f"{Fore.YELLOW}[EVENT_ENTERING]{Style.RESET_ALL} A brutal blizzard has destroyed several huts in the village!")
         loss = 15 if difficulty == "1" else 15 if difficulty == "2" else 20
-        print(f"You lose {loss} firewood!")
+        print(f"{Fore.WHITE}[EVENT]{Style.RESET_ALL} You lose {loss} firewood!")
         resources['firewood'] -= loss
 
     # Epidemic: you lose wheat and its price goes up
     elif r2 <= limits[5]:
-        print("A winter fever epidemic is spreading through the village!")
+        print(f"{Fore.YELLOW}[EVENT_ENTERING]{Style.RESET_ALL} A winter fever epidemic is spreading through the village!")
         loss = 10 if difficulty == "1" else 12 if difficulty == "2" else 15
         wheat_rise = 2 if difficulty == "1" else 4 if difficulty == "2" else 6
-        print(f"You lose {loss} wheat and wheat price rises!")
+        print(f"{Fore.MAGENTA}[EVENT]{Style.RESET_ALL} You lose {loss} wheat and wheat price rises!")
         resources['wheat'] -= loss
         resources['wheat_price'] += wheat_rise
 
     # Freezing cold wave hits, you burn extra firewood to survive
     elif r2 <= limits[6]:
-        print("A freezing cold wave hits the village!")
+        print(f"{Fore.YELLOW}[EVENT_ENTERING]{Style.RESET_ALL} A freezing cold wave hits the village!")
         loss = 5 if difficulty == "1" else 8 if difficulty == "2" else 12
-
+        print(f"{Fore.CYAN}[EVENT]{Style.RESET_ALL} You burn extra firewood to survive (-{loss}).")
         resources["firewood"] -= loss
-
-        print(f"You burn extra firewood to survive (-{loss}).")
 
     # Food storage freezes, wheat is lost
     elif r2 <= limits[7]:
-        print("Your food storage froze overnight!")
+        print(f"{Fore.YELLOW}[EVENT_ENTERING]{Style.RESET_ALL} Your food storage froze overnight!")
         loss = 8 if difficulty == "1" else 12 if difficulty == "2" else 16
-
+        print(f"{Fore.YELLOW}[EVENT]{Style.RESET_ALL} You lose {loss} wheat.")
         resources["wheat"] -= loss
-
-        print(f"You lose {loss} wheat.")
 
     # If r2 falls outside all ranges, nothing happens this turn
     else:
-        print("Nothing happened today!")
+        print(f"{Fore.GREEN}[EVENT]{Style.RESET_ALL} Nothing happened today!")
