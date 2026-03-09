@@ -28,7 +28,7 @@ day_of_weeks: list[str] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday
 def init_engine() -> tuple[str, str, dict[str, int | float]]:
     """
     init_engine initializes the game engine by prompting the player to choose a difficulty level and setting up the initial resources based on that choice.
-    It returns the chosen difficulty and the initial resources for the game.
+    It returns name of the player, the chosen difficulty and the initial resources for the game .
 
     Args:
         None
@@ -91,6 +91,7 @@ def day_cycle() -> None:
         print("\n--- MARKET ---")
         market_logic(resources)
 
+        # Check the state of the game after all updates and events.
         print("\n--- STATE CHECK ---")
         game_active = verify_state(resources)
 
