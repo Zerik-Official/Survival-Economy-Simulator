@@ -529,3 +529,15 @@
 
 - Blockers:
   No.
+
+## Daily Scrum - 09/03/26
+
+### Full Team (Product Owner, Scrum Master, T.L and Developers)
+- Wat we did today:
+  We completed the final testing and bug fixes for the game. The README was updated with detailed documentation of the project, including descriptions of each module and their functionality. Finally, we released version 1.0 of the project.
+
+- What we will do tomorrow:
+  nothing, project delivery to the client and retrospective meeting.
+
+- Blockers:
+  No blockers were reported.

@@ -98,7 +98,6 @@ Events are governed by a probability system scaled to the chosen difficulty. The
 ├── consumo.py      # Daily resource consumption and market logic.
 ├── estado.py       # Validates resource limits and checks defeat conditions.
 ├── interfaz.py     # Console display with color-coded resource output.
-├── pruebas.py      # Unit tests for all modules.
 ├── README.md       # This file.
 └── LOG.md          # Daily Scrum records for all team members.
 ```
@@ -221,6 +220,7 @@ The log covers the following sessions:
 - **06/03/26** - MVP presented to the client; positive feedback received; improvements to balance and interface clarity planned.
 - **07/03/26** - Day-of-week consumption modifier implemented; `colorama` added to event output; engine return type corrected; interface formatting improved.
 - **08/03/26** - Final testing and bug fixes; README updated with detailed documentation; project version 1.0 released.
+- **09/03/26** - project delivery to the client; retrospective meeting held to discuss lessons learned and future improvements.
 ---
 
 ## Team
