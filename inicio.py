@@ -5,7 +5,7 @@
 #              global variables based on the difficulty level.
 # ================================================================
 import random
-from colorama import Fore
+from colorama import Fore, Style
 
 # Logo of game, create in https://patorjk.com/software/taag/#p=display&f=Slant&t=Mediaval+Extreme&x=none&v=4&h=4&w=80&we=false
 logo:str = r"""
@@ -67,9 +67,9 @@ def entry_difficulty() -> str:
 
     while difficulty not in difficulty_map:
         print("Choose your difficulty:")
-        print(f"1){Fore.GREEN} Easy")
-        print(f"2){Fore.YELLOW} Normal")
-        print(f"3){Fore.RED} Hard")
+        print(f"1){Fore.GREEN} Easy{Style.RESET_ALL}")
+        print(f"2){Fore.YELLOW} Normal{Style.RESET_ALL}")
+        print(f"3){Fore.RED} Hard{Style.RESET_ALL}")
 
         difficulty:str = input("Choose difficulty (1-3): ").strip()
 
