@@ -1,6 +1,10 @@
 # Survival to the Extreme - Medieval Winter Village Simulator
 
-**Group 3 - Medieval Village Administration**
+**Medieval Village Administration**
+
+<p align="center">
+   <img src="./images/village_preview.png" alt="Preview" width="600"/>
+</p>
 
 A turn-based console survival game in which the player manages a medieval village through 10 days of winter. The objective is to keep the population alive by administering three critical resources: firewood, wheat, and gold.
 
